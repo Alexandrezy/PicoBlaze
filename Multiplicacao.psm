@@ -1,0 +1,90 @@
+;Multiplicação
+
+					 DSIN      3
+                     DSOUT     5
+
+		multiplicacao:
+					input s0, 03
+					
+					load s1, s0
+					load s2, s0
+					
+					and s1, 15
+					and s2, 240
+					
+					sr0 s2
+					sr0 s2
+					sr0 s2
+					
+					add s3, s1
+					add s4, s1
+					add s5, s1
+					add s6, s1
+					add s7, s2
+					
+					and s7, 1
+					and s3, s7
+					sl0 s7
+					and s4, s7
+					sl0 s7
+					and s5, s7
+					sl0 s7
+					and s6, s7
+					add s3, s4
+					add s5, s3
+					add s6, s5
+					
+					
+					and s7, 2
+					sr0 s7
+					and s3, s7
+					sl0 s7
+					and s4, s7
+					sl0 s7
+					and s5, s7
+					sl0 s7
+					and s6, s7
+					add s3, s4
+					add s5, s3
+					add s8, s5
+					sl0 s8
+					
+					add s8, s6
+					
+					and s7, 4
+					sr0 s7
+					and s3, s7
+					sl0 s7
+					and s4, s7
+					sl0 s7
+					and s5, s7
+					sl0 s7
+					and s6, s7
+					add s3, s4
+					add s5, s3
+					add s6, s5
+					sl0 s6
+					sl0 s6
+					
+					
+					and s7, 8
+					sr0 s7
+					and s3, s7
+					sl0 s7
+					and s4, s7
+					sl0 s7
+					and s5, s7
+					sl0 s7
+					and s6, s7
+					add s3, s4
+					add s5, s3
+					add s9, s5
+					sl0 s9
+					sl0 s9
+					sl0 s9
+					
+					add s6, s9
+					add s8, s6
+					
+					output s8, 05
+					jump multiplicacao
