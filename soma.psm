@@ -1,0 +1,16 @@
+;Exemplo2: ler 8 switches
+
+;constant switches, 01
+;constant LEDS, 03
+		soma:
+			input S0, 01
+			load S1, S0
+			load S2, S0
+			and s1, 07
+			and s2, 38
+			sr0 s2
+			sr0 s2
+			sr0 s2
+			add s1, s2
+			output s1, 03
+			jump soma
