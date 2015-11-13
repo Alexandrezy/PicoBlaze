@@ -10,13 +10,13 @@ multiplicacao:
                     LOAD      s2, s0
 
                     AND       s1, 7
-                    AND       s2, 38
+                    AND       s2, 56
 
                     SR0       s2
                     SR0       s2
                     SR0       s2
 
-                    LOAD       s3, s1
+                    LOAD      s3, s1
                     LOAD      s4, s1
                     LOAD      s5, s1
                     LOAD      s6, s2
@@ -31,16 +31,17 @@ multiplicacao:
 
                     ADD       s4, s3
                     ADD       s5, s4
-					LOAD	  s7, s5
-					
-				;----------------------------
-					LOAD      s3, s1
+                    LOAD      s7, s5
+                    
+
+; ----------------------------
+                    LOAD      s3, s1
                     LOAD      s4, s1
                     LOAD      s5, s1
                     LOAD      s6, s2
-					
-					AND       s6, 2
-					sr0 	  s6
+
+                    AND       s6, 2
+                    SR0       s6
                     AND       s3, s6
                     SL0       s6
                     AND       s4, s6
@@ -50,18 +51,18 @@ multiplicacao:
 
                     ADD       s4, s3
                     ADD       s5, s4
-					LOAD	  s8, s5
+                    LOAD      s8, s5
 					
-				;----------------------------
-				
-					LOAD      s3, s1
+; ----------------------------
+
+                    LOAD      s3, s1
                     LOAD      s4, s1
                     LOAD      s5, s1
                     LOAD      s6, s2
-					
-					AND       s6, 4
-					sr0 	  s6
-					sr0 	  s6
+
+                    AND       s6, 4
+                    SR0       s6
+                    SR0       s6
                     AND       s3, s6
                     SL0       s6
                     AND       s4, s6
@@ -71,15 +72,15 @@ multiplicacao:
 
                     ADD       s4, s3
                     ADD       s5, s4
-					LOAD	  s9, s5
-					
-				;-----------------------------	
-				
-					sl0 	  s8
-					sl0 	  s9
-					sl0 	  s9
-					ADD		  s8, s7
-					ADD		  s9, s8
+                    LOAD      s9, s5
+
+; -----------------------------
+
+                    SL0       s8
+                    SL0       s9
+                    SL0       s9
+                    ADD       s8, s7
+                    ADD       s9, s8
                     OUT       s9, 5
-					
+
                     JUMP      multiplicacao
